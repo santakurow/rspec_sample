@@ -1,0 +1,15 @@
+%h1 Users all
+
+- if @users.any?
+  %table
+    %thead
+      %th
+        Name
+    %tbody
+      = render @users
+
+- else
+  %p Not found User.
+
+
+= link_to "Add User", new_user_path
